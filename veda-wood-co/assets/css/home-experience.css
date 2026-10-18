@@ -1,0 +1,97 @@
+.entrance-hero{min-height:650px;height:min(790px,85vh);position:relative;background:#241c15;isolation:isolate;overflow:hidden;color:#fff7e7;display:flex;align-items:center}
+.entrance-image{position:absolute;inset:0;z-index:-3;object-position:75% 48%}
+.journey-image{opacity:0;transition:opacity .65s ease;transform-origin:65% 50%}
+.journey-image.journey-active{opacity:1;animation:journey-in 2.9s ease-out both}
+.journey-image:nth-of-type(even).journey-active{animation-name:journey-out}
+@keyframes journey-in{from{transform:scale(1.02)}to{transform:scale(1.24)}}
+@keyframes journey-out{from{transform:scale(1.24)}to{transform:scale(1.02)}}
+.journey-controls{position:absolute;left:max(5%,26px);bottom:24px;display:flex;align-items:center;gap:8px;z-index:3}
+.journey-dot{width:24px;height:24px;border:1px solid #efd3a766;border-radius:50%;background:#163b30aa;cursor:pointer;padding:0;position:relative}
+.journey-dot:after{content:'';position:absolute;inset:7px;border-radius:50%;background:#c7c8b4}
+.journey-dot[aria-pressed=true]:after{background:#f6c979;inset:4px}
+.journey-pause{background:#123b30ba;color:#f7e7ca;border:1px solid #eed1a666;border-radius:20px;padding:7px 14px;font:inherit;font-size:.7rem;cursor:pointer;margin-left:10px}
+.journey-controls button:focus-visible{outline:2px solid #f7cf88;outline-offset:4px}
+.entrance-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#111c19f2 0%,#14231cdb 28%,#14231c44 63%,#14231c10),linear-gradient(0deg,#161a16a6,transparent 40%)}
+.entrance-hero:after{content:'';position:absolute;inset:24px;border:1px solid #f0d9a833;z-index:-1;pointer-events:none}
+.entrance-copy{padding:54px 0 80px}
+.home-page .entrance-copy .eyebrow{color:#efc78e;font-size:.7rem;letter-spacing:.22em}
+.entrance-copy h1{font-size:clamp(3.2rem,5.2vw,6rem);line-height:1.12;font-weight:400;letter-spacing:-.04em;color:#fff8eb;margin:20px 0 24px}
+.entrance-copy h1 em{color:#efc78e;font-size:.82em}
+.entrance-copy p{color:#e1ded1;font-size:.98rem;line-height:1.9}
+.home-page .entrance-copy .btn-primary{background:#efc78e;color:#263b30;border-radius:0;gap:42px}
+.entrance-secondary{color:#fff5e4;border-bottom:1px solid #fff6;padding:12px 0;font-size:.85rem}
+.entrance-note{display:block;margin-top:34px;font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:#d2c7ae}
+.entrance-label{position:absolute;right:5%;bottom:46px;text-align:right;display:grid;gap:7px}
+.entrance-label span{color:#f0d6ac;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase}
+.entrance-label a{font-size:.85rem;color:white}
+#room-explorer{scroll-margin-top:110px;background:#fcf8ef}
+.room-tabs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #dacbb6;margin:30px 0}
+.room-tabs button{background:transparent;border:0;border-bottom:3px solid transparent;padding:18px 12px;font:inherit;font-size:.72rem;color:#89765e;cursor:pointer;text-align:left;display:flex;gap:14px;align-items:center}
+.room-tabs button span{font-size:1rem;color:#64513c}
+.room-tabs button[aria-selected=true]{border-color:#9d622f;background:#efe5d4;color:#8f5429}
+.room-tabs button[aria-selected=true] span{color:#593b24}
+.room-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.room-scene{height:510px;position:relative;overflow:hidden;background:#e7dece;border-radius:3px}
+.room-scene>img{object-fit:contain;transition:opacity .25s}
+.room-scene.is-loading>img{opacity:.35}
+.room-hotspot{position:absolute;left:55%;top:60%;display:flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #fff8;border-radius:50%;background:#fff9eae8;color:#55391e;font-size:1.6rem;cursor:pointer;box-shadow:0 0 0 8px #fff4;transition:transform .2s}
+.room-hotspot:hover{transform:scale(1.1)}
+.room-carving-hotspot{left:50%;top:28%;translate:-50% -50%}
+.room-carving-hotspot[hidden]{display:none}
+.room-hotspot:focus-visible{outline:3px solid #88552c;outline-offset:5px}
+#craft-details{scroll-margin-top:160px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.room-hotspot span{position:absolute;left:55px;background:#fff9ea;color:#55391e;font-size:.68rem;white-space:nowrap;padding:7px 10px;pointer-events:none}
+.room-product{position:absolute;left:24px;bottom:24px;right:24px;max-width:340px;background:#fffcf2f5;border:1px solid #d4b98c;padding:20px;box-shadow:0 8px 20px #0002}
+.room-product strong{display:block;font-family:var(--font-display);font-size:1rem;line-height:1.6;color:#49331f}
+.room-product a{display:inline-block;margin-top:10px;color:#88552c;border-bottom:1px solid #c3a078;font-size:.85rem}
+.room-copy h3{font-size:clamp(1.8rem,2.7vw,3rem);line-height:1.35;font-weight:400;max-width:480px}
+.room-copy>p{color:#786955;font-size:.95rem;max-width:430px;line-height:1.9;margin:20px 0}
+.room-tip{margin-top:38px;border-top:1px solid #d9c9b2;padding-top:22px;color:#73664f;font-size:.8rem;line-height:1.9}
+.room-tip a{color:#825127}
+.home-page .home-collections{padding-top:58px}
+@keyframes entrance-reveal{from{transform:scale(1.045);opacity:.5}to{transform:scale(1);opacity:1}}
+@media(max-width:900px){.room-layout{grid-template-columns:1fr}.room-scene{height:440px}.room-copy{padding-bottom:12px}.entrance-label{bottom:25px}.entrance-hero{min-height:620px}.room-copy h3{max-width:none}.room-tip{margin-top:24px}}
+@media(max-width:640px){.entrance-hero{min-height:640px;height:auto}.entrance-image{object-position:62% center}.entrance-shade{background:linear-gradient(90deg,#13291ee8,#14231c55),linear-gradient(0deg,#102018b0,transparent)}.entrance-hero:after{inset:12px}.entrance-copy{padding:60px 16px 100px}.entrance-copy h1{font-size:clamp(2.8rem,10vw,4rem)}.entrance-copy p br{display:none}.entrance-copy p{font-size:.9rem}.entrance-label{right:30px}.entrance-note{font-size:.6rem}.room-tabs{grid-template-columns:repeat(2,1fr);gap:4px}.room-tabs button{padding:14px 10px}.room-tabs button span{font-size:.85rem}.room-scene{height:360px}.room-hotspot span{left:auto;right:55px}.room-hotspot{width:42px;height:42px}.room-product{left:12px;right:12px;bottom:12px;padding:14px}.room-copy h3{font-size:2rem}}
+@media(prefers-reduced-motion:reduce){.entrance-image{animation:none}.room-scene>img{transition:none}}
+@media(prefers-reduced-motion:reduce){.journey-image.journey-active{animation:none;transform:none}.journey-image{transition:none}}
+@media(max-width:640px){.journey-controls{bottom:18px;left:28px}.entrance-label{bottom:70px}.journey-pause{font-size:.65rem;padding:7px 10px}.entrance-copy{padding-bottom:160px}}
+.craft-details{background:#eee5d6}
+.moving-strip{overflow:hidden}
+.craft-track{display:flex;width:max-content;animation:craft-scroll 26s linear infinite}
+.craft-group{display:flex;align-items:center;justify-content:space-around;gap:64px;flex-shrink:0;min-width:100vw;padding:22px 32px;font-size:.78rem;letter-spacing:.03em;color:#473723}
+.craft-group>*{white-space:nowrap}
+.craft-group>*:before{content:'✧';color:#956237;margin-right:16px}
+.moving-strip:hover .craft-track,.moving-strip:focus-within .craft-track{animation-play-state:paused}
+@keyframes craft-scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.craft-track{animation:none;width:100%}.craft-group{min-width:0;flex-wrap:wrap;gap:16px 28px;justify-content:center;width:100%;padding:18px}.craft-group[aria-hidden=true]{display:none}}
+.detail-pair{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.craft-crop{height:300px;overflow:hidden;background:#d9c5a6;margin-bottom:24px}
+.craft-crop img{object-fit:cover;transition:transform .5s}
+.carving-crop img{object-position:center 26%;transform:scale(1.45)}
+.tile-crop img{object-position:center 65%;transform:scale(1.5)}
+.detail-pair a:hover img{transform:scale(1.6)}
+.detail-pair>a>span{color:#8f603c;text-transform:uppercase;font-size:.66rem;letter-spacing:.16em}
+.detail-pair h3{margin:10px 0;font-size:1.4rem;font-weight:400}
+.detail-pair p{font-size:.85rem;color:#79634b}
+@media(max-width:640px){.detail-pair{grid-template-columns:1fr;gap:28px}.craft-crop{height:240px}}
+
+/* Royal vintage typography with comfortable reading sizes. */
+.home-page h2,.home-page .entrance-copy h1{letter-spacing:0;line-height:1.25;font-weight:500}
+.home-page .entrance-copy h1{font-family:var(--font-reading);font-weight:400}
+.entrance-copy h1 em{font-family:var(--font-reading);font-weight:400;letter-spacing:0}
+.home-page .topbar{font-size:.75rem;letter-spacing:.1em}
+.home-page .logo-text span{font-size:.75rem;letter-spacing:.08em}
+.home-page .eyebrow,.home-page .entrance-copy .eyebrow{font-size:.75rem;letter-spacing:.12em}
+.home-page .entrance-copy p,.home-page .room-copy>p{font-size:1rem;line-height:1.85}
+.home-page .entrance-note{font-family:var(--font-ui);font-size:.75rem;letter-spacing:.08em}
+.home-page .home-story .point p{font-size:.9375rem;line-height:1.85}
+.home-page .home-story .point h3{font-size:1.0625rem;line-height:1.5}
+.room-tip,.detail-pair p{font-size:.9375rem}
+.room-hotspot span,.entrance-label,.craft-group,.detail-pair>a>span{font-family:var(--font-ui)}
+@media(max-width:640px){
+  .home-page .entrance-copy h1{font-size:clamp(2.1rem,8.5vw,3.4rem)}
+  .home-page .logo-text strong{font-size:1.5rem}
+  .home-page .logo-text span{font-size:.6875rem}
+  .home-page .entrance-copy p{font-size:1rem}
+}

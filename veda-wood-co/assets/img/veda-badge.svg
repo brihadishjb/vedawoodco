@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Veda Wood Co badge">
+  <defs>
+    <style>
+      .o{fill:none;stroke:#c67820;stroke-width:6}
+      .t{fill:#c67820;font-family:Georgia, 'Times New Roman', serif;font-weight:700}
+      .s{fill:#c67820;font-family:Arial, sans-serif;font-size:16px;font-weight:700;letter-spacing:2px}
+    </style>
+  </defs>
+  <circle cx="110" cy="110" r="99" class="o"/>
+  <circle cx="110" cy="110" r="82" class="o"/>
+  <g fill="#c67820">
+    <path d="M110 48c7 0 12 5 12 11 0 5-3 9-7 10 8 2 14 9 14 18 0 2 0 4-1 6h-8c1-2 1-4 1-6 0-7-5-12-12-12s-12 5-12 12c0 2 0 4 1 6h-8c-1-2-1-4-1-6 0-9 6-16 14-18-4-1-7-5-7-10 0-6 5-11 12-11h2Zm-1 7c-3 0-5 2-5 5 0 4 3 6 6 6s6-2 6-6c0-3-2-5-5-5h-2Z"/>
+    <rect x="107" y="90" width="6" height="18" rx="3"/>
+    <path d="M73 106h74v8H73z"/>
+  </g>
+  <text x="110" y="138" text-anchor="middle" class="t" font-size="38">VEDA</text>
+  <text x="110" y="162" text-anchor="middle" class="s">WOOD CO.</text>
+  <text x="110" y="176" text-anchor="middle" fill="#c67820" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" textLength="106" lengthAdjust="spacingAndGlyphs">AUTHENTIC HERITAGE FURNITURE</text>
+</svg>
